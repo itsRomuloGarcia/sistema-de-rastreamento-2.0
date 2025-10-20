@@ -35,7 +35,6 @@ export default function HomePage() {
                 <h1 className="text-2xl font-bold bg-gradient-to-r from-gray-900 to-[#ea1d2c] dark:from-gray-100 dark:to-[#FFA000] bg-clip-text text-transparent">
                   Rastreio Videosoft
                 </h1>
-                {/* REMOVIDO: <p> vazio */}
               </div>
             </div>
             <ThemeToggle />
@@ -52,7 +51,6 @@ export default function HomePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            {/* CORRIGIDO: Separado h2 e p */}
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
               Rastreador de Entregas
             </h2>
@@ -105,7 +103,6 @@ export default function HomePage() {
           {/* Botão iFood - Integrado no card */}
           <div className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
             <div className="flex items-center justify-center gap-4">
-              {/* REMOVIDO: <span> vazio */}
               <a 
                 href="/rastreio-ifood"
                 className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#ea1d2c] to-[#FFA000] hover:from-[#d01827] hover:to-[#b81522] text-white rounded-lg font-medium transition-all hover:scale-105 shadow-lg"
