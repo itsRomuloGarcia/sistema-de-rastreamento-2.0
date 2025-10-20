@@ -31,7 +31,7 @@ export default function HomePage() {
                 <Truck className="relative w-8 h-8 text-[#FFA000]" />
               </div>
               <h1 className="text-2xl font-bold bg-gradient-to-r from-gray-900 to-[#ea1d2c] dark:from-gray-100 dark:to-[#FFA000] bg-clip-text text-transparent">
-                Rastreio Videosoft
+                Rastreio de pedidos Videosoft
               </h1>
             </div>
             <ThemeToggle />
@@ -47,7 +47,7 @@ export default function HomePage() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Rastreador de Entregas
+              Rastreador
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
               Digite o número do pedido ou nota fiscal
