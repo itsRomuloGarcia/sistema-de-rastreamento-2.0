@@ -33,7 +33,7 @@ export default function HomePage() {
               </div>
               <div>
                 <h1 className="text-2xl font-bold bg-gradient-to-r from-gray-900 to-[#ea1d2c] dark:from-gray-100 dark:to-[#FFA000] bg-clip-text text-transparent">
-                  Rastreio Videosoft
+                    Rastreio Videosoft
                 </h1>
                 <p className="text-sm text-[#FDB913]">
                   
