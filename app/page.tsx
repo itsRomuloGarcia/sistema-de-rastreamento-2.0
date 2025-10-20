@@ -33,11 +33,9 @@ export default function HomePage() {
               </div>
               <div>
                 <h1 className="text-2xl font-bold bg-gradient-to-r from-gray-900 to-[#ea1d2c] dark:from-gray-100 dark:to-[#FFA000] bg-clip-text text-transparent">
-                    Rastreio Videosoft
+                  Rastreio Videosoft
                 </h1>
-                <p className="text-sm text-[#FDB913]">
-                  
-                </p>
+                {/* REMOVIDO: <p> vazio */}
               </div>
             </div>
             <ThemeToggle />
@@ -54,8 +52,10 @@ export default function HomePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
+            {/* CORRIGIDO: Separado h2 e p */}
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Rastreador
+              Rastreador de Entregas
+            </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
               Digite o número do pedido ou nota fiscal
             </p>
@@ -105,7 +105,7 @@ export default function HomePage() {
           {/* Botão iFood - Integrado no card */}
           <div className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
             <div className="flex items-center justify-center gap-4">
-              <span className="text-gray-500 dark:text-gray-400 text-sm"></span>
+              {/* REMOVIDO: <span> vazio */}
               <a 
                 href="/rastreio-ifood"
                 className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#ea1d2c] to-[#FFA000] hover:from-[#d01827] hover:to-[#b81522] text-white rounded-lg font-medium transition-all hover:scale-105 shadow-lg"
@@ -214,7 +214,9 @@ export default function HomePage() {
           <div className="text-center">
             <div className="flex items-center justify-center gap-2 mb-4">
               <Truck className="w-5 h-5 text-[#FFA000]" />
-            
+              <span className="font-semibold text-gray-900 dark:text-white">
+                Rastreio Videosoft
+              </span>
             </div>
             <div className="text-sm text-gray-600 dark:text-gray-400">
               © 2025 · {' '}
