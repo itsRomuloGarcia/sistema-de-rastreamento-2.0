@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { useTrackingSearch } from '@/hooks/use-tracking'
-import { Search, Package, Truck, Clock, ArrowRight } from 'lucide-react'
+import { Search, Truck, Clock, ArrowRight } from 'lucide-react'
 import { TrackingResult } from '@/components/tracking-result'
 import { ThemeToggle } from '@/components/theme-toggle'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -22,29 +22,24 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen flex flex-col bg-white dark:bg-gray-900 transition-colors">
-      {/* Header */}
       <header className="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 transition-colors">
         <div className="max-w-6xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="relative">
-                <div className="absolute -inset-1 bg-[#FFA000]/20 rounded-lg blur-sm"></div>
+                <div className="absolute -inset-1 bg-[#FFA000]/20 rounded-lg blur-sm" />
                 <Truck className="relative w-8 h-8 text-[#FFA000]" />
               </div>
-              <div>
-                <h1 className="text-2xl font-bold bg-gradient-to-r from-gray-900 to-[#ea1d2c] dark:from-gray-100 dark:to-[#FFA000] bg-clip-text text-transparent">
-                  Rastreio Videosoft
-                </h1>
-              </div>
+              <h1 className="text-2xl font-bold bg-gradient-to-r from-gray-900 to-[#ea1d2c] dark:from-gray-100 dark:to-[#FFA000] bg-clip-text text-transparent">
+                Rastreio Videosoft
+              </h1>
             </div>
             <ThemeToggle />
           </div>
         </div>
       </header>
 
-      {/* Main Content */}
       <main className="flex-1 max-w-4xl mx-auto px-4 py-8 w-full">
-        {/* Hero Section */}
         <div className="text-center mb-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -60,7 +55,6 @@ export default function HomePage() {
           </motion.div>
         </div>
 
-        {/* Search Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -87,22 +81,19 @@ export default function HomePage() {
               </div>
             </div>
             
-            <div className="flex gap-4">
-              <button
-                type="submit"
-                disabled={query.trim().length < 1}
-                className="btn-primary bg-gradient-to-r from-[#FFA000] to-[#FDB913] hover:from-[#FDB913] hover:to-[#FFA000] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3 py-3 text-lg font-semibold transition-all hover:scale-105 flex-1"
-              >
-                <Search className="w-5 h-5" />
-                Consultar Entrega
-                <ArrowRight className="w-4 h-4" />
-              </button>
-            </div>
+            <button
+              type="submit"
+              disabled={query.trim().length < 1}
+              className="btn-primary bg-gradient-to-r from-[#FFA000] to-[#FDB913] hover:from-[#FDB913] hover:to-[#FFA000] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3 py-3 text-lg font-semibold transition-all hover:scale-105 w-full"
+            >
+              <Search className="w-5 h-5" />
+              Consultar Entrega
+              <ArrowRight className="w-4 h-4" />
+            </button>
           </form>
 
-          {/* Botão iFood - Integrado no card */}
           <div className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
-            <div className="flex items-center justify-center gap-4">
+            <div className="flex items-center justify-center">
               <a 
                 href="/rastreio-ifood"
                 className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#ea1d2c] to-[#FFA000] hover:from-[#d01827] hover:to-[#b81522] text-white rounded-lg font-medium transition-all hover:scale-105 shadow-lg"
@@ -114,10 +105,10 @@ export default function HomePage() {
           </div>
         </motion.div>
 
-        {/* Results Section */}
         <AnimatePresence mode="wait">
           {isLoading && (
             <motion.div
+              key="loading"
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
@@ -125,7 +116,7 @@ export default function HomePage() {
             >
               <div className="flex flex-col items-center">
                 <div className="relative mb-4">
-                  <div className="animate-spin w-12 h-12 border-4 border-[#FFA000]/20 border-t-[#FFA000] rounded-full"></div>
+                  <div className="animate-spin w-12 h-12 border-4 border-[#FFA000]/20 border-t-[#FFA000] rounded-full" />
                   <Clock className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 text-[#FFA000]" />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
@@ -140,6 +131,7 @@ export default function HomePage() {
 
           {error && (
             <motion.div
+              key="error"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
@@ -163,6 +155,7 @@ export default function HomePage() {
 
           {searchTerm && !isLoading && !error && !tracking && (
             <motion.div
+              key="not-found"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
@@ -186,6 +179,7 @@ export default function HomePage() {
 
           {tracking && (
             <motion.div
+              key="result"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
@@ -205,7 +199,6 @@ export default function HomePage() {
         </AnimatePresence>
       </main>
 
-      {/* Footer */}
       <footer className="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 transition-colors mt-auto">
         <div className="max-w-6xl mx-auto px-4 py-8">
           <div className="text-center">
@@ -216,17 +209,14 @@ export default function HomePage() {
               </span>
             </div>
             <div className="text-sm text-gray-600 dark:text-gray-400">
-              © 2025 · {' '}
-              <a 
+              © 2025 · <a 
                 href="https://linkedin.com/in/itsromulogarcia" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-[#FFA000] hover:text-[#FDB913] transition-colors font-medium"
               >
                 LinkedIn
-              </a>
-              {' '}·{' '}
-              <a 
+              </a> · <a 
                 href="https://github.com/itsromulogarcia" 
                 target="_blank" 
                 rel="noopener noreferrer"
