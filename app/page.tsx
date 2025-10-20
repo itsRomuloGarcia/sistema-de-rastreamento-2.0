@@ -55,8 +55,7 @@ export default function HomePage() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Rastreador<span className="text-[#FFA000]"></span>
-            </h2>
+              Rastreador
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
               Digite o número do pedido ou nota fiscal
             </p>
@@ -215,9 +214,7 @@ export default function HomePage() {
           <div className="text-center">
             <div className="flex items-center justify-center gap-2 mb-4">
               <Truck className="w-5 h-5 text-[#FFA000]" />
-              <span className="font-semibold text-gray-900 dark:text-white">
-                
-              </span>
+            
             </div>
             <div className="text-sm text-gray-600 dark:text-gray-400">
               © 2025 · {' '}
