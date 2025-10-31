@@ -5,7 +5,7 @@ import { Providers } from './providers'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'ShipTrace',
+  title: 'TrackShipping',
   description: 'Sistema de rastreamento de pedidos',
 }
 
