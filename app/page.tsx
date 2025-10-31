@@ -33,7 +33,7 @@ export default function HomePage() {
               </div>
               <div>
                 <h1 className="text-2xl font-bold bg-gradient-to-r from-gray-900 to-[#ea1d2c] dark:from-gray-100 dark:to-[#FFA000] bg-clip-text text-transparent">
-                  Rastreio de pedidos Videosoft
+                  Rastreio Videosoft
                 </h1>
                 <p className="text-sm text-[#FDB913]">
                   
@@ -55,7 +55,7 @@ export default function HomePage() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Rastreador<span className="text-[#FFA000]"></span>
+              TrackShipping<span className="text-[#FFA000]"></span>
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
               Digite o número do pedido ou nota fiscal
@@ -73,7 +73,7 @@ export default function HomePage() {
           <form onSubmit={handleSearch} className="space-y-6">
             <div>
               <label htmlFor="search" className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">
-                Número do Pedido ou Nota Fiscal
+                Número do pedido ou nota fiscal
               </label>
               <div className="relative">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
@@ -220,7 +220,7 @@ export default function HomePage() {
               </span>
             </div>
             <div className="text-sm text-gray-600 dark:text-gray-400">
-              © 2025 · Desenvolvido com ajuda de IA · {' '}
+              © 2025 · TrackShipping · Desenvolvido com ajuda de IA · {' '}
               <a 
                 href="https://linkedin.com/in/itsromulogarcia" 
                 target="_blank" 
