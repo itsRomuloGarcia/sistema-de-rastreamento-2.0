@@ -354,7 +354,7 @@ export default function RastreioIfoodPage() {
               </span>
             </div>
             <div className="text-sm text-gray-600 dark:text-gray-400">
-              © 2025 · Desenvolvido com ajuda de IA {' '}
+              © 2025 · Desenvolvido com ajuda de IA · {' '}
               <a 
                 href="https://linkedin.com/in/itsromulogarcia" 
                 target="_blank" 
