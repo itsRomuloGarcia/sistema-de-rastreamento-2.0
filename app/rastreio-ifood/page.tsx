@@ -97,7 +97,7 @@ export default function RastreioIfoodPage() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
-              Rastreador <span className="text-[#ea1d2c]"></span>
+              TrackShipping <span className="text-[#ea1d2c]"></span>
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
               Digite o CPF ou CNPJ do cliente para consultar todos os pedidos iFood
