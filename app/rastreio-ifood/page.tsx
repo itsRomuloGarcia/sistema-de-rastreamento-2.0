@@ -350,7 +350,7 @@ export default function RastreioIfoodPage() {
             <div className="flex items-center justify-center gap-2 mb-4">
               <Truck className="w-5 h-5 text-[#ea1d2c]" />
               <span className="font-semibold text-gray-900 dark:text-gray-100">
-                
+                TrackShipping
               </span>
             </div>
             <div className="text-sm text-gray-600 dark:text-gray-400">
