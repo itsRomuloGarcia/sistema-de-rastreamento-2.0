@@ -5,8 +5,8 @@ import { Providers } from './providers'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Sistema de Rastreamento',
-  description: 'Sistema corporativo de rastreamento de pedidos',
+  title: 'ShipTrace',
+  description: 'Sistema de rastreamento de pedidos',
 }
 
 export default function RootLayout({
