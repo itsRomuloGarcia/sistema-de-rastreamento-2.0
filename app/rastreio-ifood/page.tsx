@@ -359,7 +359,7 @@ export default function RastreioIfoodPage() {
                 href="https://linkedin.com/in/itsromulogarcia" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors font-medium"
+                className="text-[#ea1d2c] hover:text-[#d01827] transition-colors font-medium"
               >
                 LinkedIn
               </a>
@@ -368,7 +368,7 @@ export default function RastreioIfoodPage() {
                 href="https://github.com/itsromulogarcia" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors font-medium"
+                className="text-[#ea1d2c] hover:text-[#d01827] transition-colors font-medium"
               >
                 GitHub
               </a>
